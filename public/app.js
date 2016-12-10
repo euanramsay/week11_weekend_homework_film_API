@@ -1,7 +1,15 @@
 var app = function(){
-  var url = 'http://www.omdbapi.com/?t=+Planes%2C+Trains+%26+Automobiles&y=1987&plot=full&r=json'
+
+  // var url = 'http://www.omdbapi.com/?t=+Planes%2C+Trains+%26+Automobiles&y=1987&plot=full&r=json'
+  var title = "Father of the Bride";
+  var url = 'http://www.omdbapi.com/?t=' + title + '&plot=full&r=json'
+  console.log(url);
   makeRequest(url, requestComplete);
   var saved = localStorage.selection;
+  new FilmList();
+
+  var selectBox = document.querySelector('select');
+  selectBox.onchange = handleSelectChanged;
 
 }
 
@@ -20,20 +28,20 @@ var requestComplete = function() {
   var listing = JSON.parse(jsonString);
   console.log(listing);
   console.log(listing.Title);
-  populateList(listing);
+  new PopulateList(listing);
 }
 
-var populateList = function(listing) {
-  var div = document.querySelector('#films');
-  var p = document.createElement('p');
-  var li = document.createElement('li');
-  var img = document.createElement('img')
-  img.setAttribute('src', listing.Poster);
-  p.innerText = listing.Plot;
-  li.innerText = listing.Title;
-  div.appendChild(li);
-  li.appendChild(img);
-  li.append(p);
+var handleSelectChanged = function( event ) {
+  console.log( event.target.value );
+  var film = countries[event.target.value];
+  var pTag = document.querySelector('#select-result');
+  pTag.innerText = film.title;
+  var filmstring = JSON.stringify(film);
+  localStorage.selection = filmstring;
 }
+
+
+
+
 
 window.onload = app;

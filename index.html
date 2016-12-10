@@ -3,7 +3,10 @@
   <head>
     <title>Films</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script src='app.js'></script>
+    <script type="text/javascript" src="data.json"></script>
+    <script src="filmList.js"></script>
+    <script src="populateList.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
     <main>
@@ -11,7 +14,13 @@
         <input id="search-query" name="search-query" />
       </div>
       <div id="films">
+      <ul id="list"></ul>
       </div>
+      <h1>Films</h1>
+      <select id='film-list'>
+        <option disabled>Choose a Steve Martin movie!</option>    
+      </select>
+      <p id="select-result"></p>
     </main>
   </body>
 </html>
