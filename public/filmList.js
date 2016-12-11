@@ -25,9 +25,6 @@ var FilmList = function() {
 
 
 
-  console.log(films);
-
-
 var films = [ {
   "year" : "2016" , "title" : "Billy Lynn's Long Halftime Walk", "character" : "Norm" 
 },
@@ -59,17 +56,17 @@ var films = [ {
 },
 { "year" : "2001" , "title" : "Novocaine" , "character" : "Frank Sangster"
 },
-{ year: 2000, title: "Joe Gould's Secret", character: "Charlie Duell"
+{ "year" : "2000" , "title" : "Joe Gould's Secret" , "character" : "Charlie Duell"
 },
-{ year: 1999, title: "Bowfinger", character: "Bowfinger"
+{ "year" : "1999" , "title" : "Bowfinger" , "character" : "Bowfinger"
 },
-{ year: 1999, title: "The Out-of-Towners", character: "Henry Clark"
+{ "year" : "1999" , "title" : "The Out-of-Towners" , "character" : "Henry Clark"
 },
-{ year: 1998, title: "The Prince of Egypt", character: "Hotep (voice)"
+{ "year" : "1998" , "title" : "The Prince of Egypt" , "character" : "Hotep (voice)"
 },
-{ year: 1997, title: "The Spanish Prisoner", character: "Julian 'Jimmy' Dell"
+{ "year" : "1997" , "title" : "The Spanish Prisoner" , "character" : "Julian 'Jimmy' Dell"
 },
-{ year: 1996, title: "Sgt. Bilko", character: "Master Sergeant Ernest G. Bilko"
+{ "year" : "1996" , "title" : "Sgt. Bilko" , "character" : "Master Sergeant Ernest G. Bilko"
 },
 { year: 1995, title: "Father of the Bride Part II", character: "George Banks"
 },
@@ -125,4 +122,6 @@ var films = [ {
 },
 { year: 1972, title: "Another Nice Mess", character: "Hippie"
 }]
+
+console.log(films);
 

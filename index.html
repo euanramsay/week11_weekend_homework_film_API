@@ -3,7 +3,6 @@
   <head>
     <title>Films</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script type="text/javascript" src="data.json"></script>
     <script src="filmList.js"></script>
     <script src="populateList.js"></script>
     <script src="app.js"></script>
@@ -11,16 +10,18 @@
   <body>
     <main>
       <div>
-        <input id="search-query" name="search-query" />
+        <h1>Welcome to Steve Martin Movies!</h1>
       </div>
+      <div id="info-screen">
       <div id="films">
       <ul id="list"></ul>
       </div>
-      <h1>Films</h1>
+      <h3>Select a Steve Martin movie here</h3>
       <select id='film-list'>
         <option disabled>Choose a Steve Martin movie!</option>    
       </select>
       <p id="select-result"></p>
+    </div>
     </main>
   </body>
 </html>
