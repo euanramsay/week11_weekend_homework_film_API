@@ -1,12 +1,14 @@
 var app = function(){
   var saved = localStorage.selection;
-  if (saved != undefined){
+  console.log(saved);
+  if (saved !== undefined){
+    var saved = JSON.parse(localStorage.selection);
     var title = saved.title;
     console.log(saved.title);
     var url = 'http://www.omdbapi.com/?t=' + title + '&plot=full&r=json'
     console.log(url);
     makeRequest(url, requestComplete);
-    }
+  }
   new FilmList();
   var selectBox = document.querySelector('select');
   selectBox.onchange = handleSelectChanged;
